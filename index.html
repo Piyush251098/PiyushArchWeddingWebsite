@@ -566,20 +566,31 @@
         color: var(--eyebrow);
       }
       .field input {
-        width: 100%;
-        border: 0;
-        border-bottom: 2px solid var(--border);
-        background: transparent;
-        padding: 14px 4px;
-        font-size: 1.2rem;
-        color: var(--foreground);
-        box-shadow: 0 2px 8px rgba(99,13,22,0.05);
-        transition: all 0.25s ease;
-      }
-      .field input:focus {
-        outline: none;
-        border-bottom-color: var(--gold);
-      }
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid var(--border);
+  background: transparent;
+  padding: 14px 4px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: var(--foreground);
+  box-shadow: 0 2px 8px rgba(99,13,22,0.05);
+  transition: all 0.25s ease, font-size 0.2s ease, color 0.2s ease;
+}
+.field input::placeholder {
+  color: #9CA3AF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+.field input:not(:placeholder-shown) {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  color: var(--foreground);
+}
+.field input:focus {
+  outline: none;
+  border-bottom-color: var(--gold);
+}
       .segmented {
         display: flex;
         align-items: stretch;
@@ -593,9 +604,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 16px;
+        padding: 8 16px;
         background: transparent;
-        font-size: 0.95rem;
+        font-size: 0.75rem;
         color: var(--ink-soft);
         cursor: pointer;
         transition: background 0.25s ease, color 0.25s ease;
@@ -655,11 +666,11 @@
       }
       .form-error {
         display: none;
-        margin-top: 18px;
+        margin-top: 16px;
         color: #a11d1d;
         font-size: 0.82rem;
         letter-spacing: 0.08em;
-        text-transform: uppercase;
+      
         font-weight: 600;
       }
       .form-error.show {
@@ -957,7 +968,7 @@
           <form class="rsvp-form" id="rsvp-form" novalidate>
             <div class="field">
               <label for="name">Name <span class="required-star">*</span></label>
-              <input id="name" name="name" type="text" placeholder="Your name" required />
+              <input id="name" name="name" type="text" placeholder="Enter your name" required />
             </div>
 
             <div class="field">
@@ -971,13 +982,13 @@
             </div>
 
             <div class="field">
-              <label for="guests">Number of guests <span class="required-star">*</span></label>
-              <input id="guests" name="guests" type="number" min="1" max="6" placeholder="Enter number of guests" required />
+              <label for="guests">Number of guests  <span class="required-star">*</span></label>
+              <input id="guests" name="guests" type="number" min="1" max="6" placeholder="Enter number of guests attending" required />
             </div>
 
             <div class="field">
               <label for="comments">Additional Comments <span style="font-style: italic; font-weight: 400;">(Optional)</span></label>
-              <input id="comments" name="comments" type="text" placeholder="Share any thoughts with us..." />
+              <input id="comments" name="comments" type="text" placeholder="Share any additional comment or thoughts with us" />
             </div>
 
             <button class="rsvp-btn" id="rsvp-submit" type="submit" disabled>Send RSVP</button>
