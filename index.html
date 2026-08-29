@@ -487,12 +487,13 @@
         height: 22px;
       }
       .event-row h4 {
-        font-size: 1.7rem;
+        font-size: 2rem;
       }
       .event-meta {
-        margin-top: 8px;
-        font-size: 0.68rem;
-        text-transform: uppercase;
+        margin-top: 12px;
+        font-size: 1rem;
+       
+    
         letter-spacing: 0.18em;
         color: var(--eyebrow);
       }
@@ -521,12 +522,93 @@
       .venue-info h3 {
         font-size: clamp(2rem, 3vw, 2.6rem);
         color: var(--primary);
+        
       }
       .venue-info p {
         margin-top: 14px;
         line-height: 1.8;
+        
         color: var(--ink-soft);
       }
+      .venue-info p2 {
+        margin-top: 14px;
+        line-height: 1.8;
+        
+        color: var(--ink-soft);
+      }
+      .venue-address {
+  max-width: 500px;
+  margin: 14px auto 0 !important;
+  line-height: 1.7 !important;
+  color: var(--ink-soft);
+}
+
+.location-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 600px;
+  margin: 36px auto 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.location-detail {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 24px 22px;
+  text-align: left;
+}
+
+.location-detail + .location-detail {
+  border-left: 1px solid var(--border);
+}
+
+.location-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.location-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.location-label {
+  margin: 0 !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.65rem !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--eyebrow) !important;
+  line-height: 1.4 !important;
+}
+
+.location-value {
+  margin: 6px 0 0 !important;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem !important;
+  line-height: 1.3 !important;
+  color: var(--ink-soft) !important;
+}
+
+@media (max-width: 600px) {
+  .location-details {
+    grid-template-columns: 1fr;
+  }
+
+  .location-detail {
+    padding: 20px 16px;
+  }
+
+  .location-detail + .location-detail {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+}
       .venue-btn {
         display: inline-flex;
         align-items: center;
@@ -685,7 +767,7 @@
         justify-content: center;
         border: 1.5px solid var(--foreground);
         background: transparent;
-        padding: 12px 28px;
+        padding: 16px 28px;
         font-size: 0.8rem;
         letter-spacing: 0.12em;
         color: var(--foreground);
@@ -779,7 +861,7 @@
               <img src="story-1.webp" alt="Our first meeting at the station" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
             <div class="chapter-body">
-              <h3>It started with a train to Portugal.</h3>
+              <h3>It started with a trip to Portugal.</h3>
               <p>We were both studying in Germany, living our own lives and travelling with our friends. Then, at a train station on the way to Portugal, our paths happened to cross. We didn't know it then, but that little moment would become the beginning of our story.</p>
             </div>
           </div>
@@ -792,7 +874,7 @@
             </div>
             <div class="chapter-body">
               <h3>Somewhere between the conversations, the gym and good food</h3>
-              <p>We found ourselves talking a little more, laughing a little more, and looking forward to seeing each other. And then there was food — especially the kind worth talking about.</p>
+              <p>We started talking a little more, laughing a little more, and spending more time together. There were gym sessions, plenty of conversations, and, of course, a shared love for good food.</p>
             </div>
           </div>
 
@@ -804,7 +886,7 @@
             </div>
             <div class="chapter-body">
               <h3>And, of course, pizza.</h3>
-              <p>He had a habit of showing up with pizza. But somewhere along the way, it wasn't really about the pizza. It was the way he remembered the little things, helped without being asked, and always found a way to take care of her.</p>
+              <p>He had a habit of showing up with pizza. But somewhere along the way, it wasn't really about the pizza. It was the way he remembered the little things, helped without being asked, and always found a way to take care of each other</p>
             </div>
           </div>
 
@@ -861,7 +943,7 @@
           <p class="eyebrow">The Celebrations</p>
           <h2 class="h2">The Celebrations</h2>
           <div class="rule reveal"></div>
-          <p class="lede">And now, we get to celebrate it all — with the people who make these moments special.</p>
+          <p class="lede">And now, we get to celebrate it all, with the people who make these moments special.</p>
         </div>
 
         <div class="wrap">
@@ -882,8 +964,8 @@
                     </span>
                     <h4>Haldi</h4>
                   </div>
-                  <p class="event-meta">9:00 AM · The Garden Courtyard, Jaipur</p>
-                  <p class="event-desc">A little colour, a lot of laughter, and the beginning of the celebrations.</p>
+                  <p class="event-meta">2:00 PM Onwards · The Moments Resort, Ranchi</p>
+                  <!-- <p class="event-desc">A little colour, a lot of laughter, and the beginning of the celebrations.</p> -->
                 </div>
 
                 <div class="event-row">
@@ -896,8 +978,8 @@
                     </span>
                     <h4>Sangeet</h4>
                   </div>
-                  <p class="event-meta">Evening · 9:00 PM · The Garden Courtyard, Jaipur</p>
-                  <p class="event-desc">An evening of music, dancing, laughter, and memories in the making.</p>
+                  <p class="event-meta">7:00 PM Onwards · The Moments Resort, Ranchi</p>
+                  <!-- <p class="event-desc">An evening of music, dancing, laughter, and memories in the making.</p> -->
                 </div>
               </div>
             </div>
@@ -918,8 +1000,8 @@
                     </span>
                     <h4>Wedding</h4>
                   </div>
-                  <p class="event-meta">4:30 PM · The Grand Hall, Jaipur</p>
-                  <p class="event-desc">The day we’ve been waiting for.</p>
+                  <p class="event-meta">9:00 AM Onwards · The Moments Resort, Ranchi</p>
+                  <!-- <p class="event-desc">The day we’ve been waiting for.</p> -->
                 </div>
 
                 <div class="event-row">
@@ -935,8 +1017,8 @@
                     </span>
                     <h4>Varmala</h4>
                   </div>
-                  <p class="event-meta">Evening · 6:30 PM · The Grand Hall, Jaipur</p>
-                  <p class="event-desc">And the evening ends with a moment we’ll remember forever.</p>
+                  <p class="event-meta">7:00 PM Onwards · The Moments Resort, Ranchi</p>
+                  <!-- <p class="event-desc">And the evening ends with a moment we’ll remember forever.</p> -->
                 </div>
               </div>
             </div>
@@ -945,20 +1027,81 @@
         </div>
       </section>
 
-      <section id="venue" style="background: var(--muted);">
-        <div class="wrap">
-          <p class="eyebrow reveal">Venue</p>
-          <h2 class="h2 reveal">Find your way to us</h2>
-          <div class="rule reveal"></div>
+     <section id="venue" style="background: var(--muted);">
+  <div class="wrap">
 
-          <div class="venue-info reveal">
-            <h3>The Grand Hall</h3>
-            <p>C-Scheme, Jaipur, Rajasthan 302001, India</p>
-            <p>Complimentary shuttle service runs from partner hotels on both days — details in your welcome card at check-in.</p>
-            <a class="venue-btn" href="https://www.openstreetmap.org/search?query=Jaipur%20Rajasthan" target="_blank" rel="noopener">Get Directions</a>
+    <p class="eyebrow reveal">Venue</p>
+
+    <h2 class="h2 reveal">Find your way to us</h2>
+
+    <div class="rule reveal"></div>
+
+    <div class="venue-info reveal">
+
+      <h3>The Moments Resort</h3>
+
+      <p class="venue-address">
+        Khunti Road, Ranchi, Dundu,<br>
+        Jharkhand 835221
+      </p>
+
+     <div class="location-details">
+
+  <!-- Airport -->
+  <div class="location-detail">
+    <div class="location-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 12h18"/>
+        <path d="M12 12L8 5h2.5l5 7"/>
+        <path d="M12 12l-4 7h2.5l5-7"/>
+        <path d="M17 12l3-3"/>
+        <path d="M17 12l3 3"/>
+      </svg>
+    </div>
+
+    <div>
+      <p class="location-label">Birsa Munda Airport</p>
+      <p class="location-value">15 km · Approx. 25 min by car</p>
+    </div>
+  </div>
+
+  <!-- Railway Station -->
+  <div class="location-detail">
+    <div class="location-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 19V7.5C5 5.6 8.1 4 12 4s7 1.6 7 3.5V19"/>
+        <path d="M5 12h14M8 19l-1.5 2M16 19l1.5 2"/>
+        <circle cx="9" cy="15.5" r="1"/>
+        <circle cx="15" cy="15.5" r="1"/>
+      </svg>
+    </div>
+
+    <div>
+      <p class="location-label">Ranchi Railway Station</p>
+      <p class="location-value">18 km · Approx. 30 min by car</p>
+    </div>
+  </div>
+
+</div>
+      <a
+        class="venue-btn"
+        href="https://maps.app.goo.gl/Fc8Xf5ibsQtzcPK96?g_st=iw"
+        target="_blank"
+        rel="noopener"
+      >
+        Get Directions
+      </a>
+
+    </div>
+  </div>
+</section>
+            <!-- <p>Complimentary shuttle service runs from partner hotels on both days — details in your welcome card at check-in.</p> -->
+            <!-- <a class="venue-btn" href="https://www.google.com/maps/place/Moments+Resort/@23.2187433,85.2929736,17z/data=!3m1!4b1!4m9!3m8!1s0x39f51f392fb6333b:0xee9f9ef2d8376de8!5m2!4m1!1i2!8m2!3d23.2187433!4d85.2929736!16s%2Fg%2F11fpkljl9h!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Get Directions</a>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section id="rsvp" style="background: var(--muted);">
         <div class="wrap-narrow rsvp-section reveal">
@@ -1037,23 +1180,47 @@
       const formError = document.getElementById('form-error');
       const SHEET_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwKbU_Lx3svLZQxHeYP9l7h7GH52JHewF3qZS-CcCRJWgA7YI8zsBrFUwkirIKkliGM/exec';
 
-      function validateRsvpForm() {
-        const hasName = nameInput.value.trim() !== '';
-        const attendingValue = Array.from(attendingInputs).find((input) => input.checked)?.value || '';
-        const isDeclining = attendingValue === 'no';
-        const hasGuests = isDeclining || (guestsInput.value.trim() !== '' && Number(guestsInput.value) >= 1);
-        const isValid = hasName && attendingValue && hasGuests;
+     function validateRsvpForm() {
+  const hasName = nameInput.value.trim() !== '';
+  const attendingValue = Array.from(attendingInputs).find((input) => input.checked)?.value || '';
+  const isDeclining = attendingValue === 'no';
+  const guestsValue = Number(guestsInput.value);
+  const hasGuests = isDeclining || (guestsInput.value.trim() !== '' && guestsValue >= 1 && guestsValue <= 9);
+  const isValid = hasName && attendingValue && hasGuests;
 
-        submitBtn.disabled = !isValid;
+  submitBtn.disabled = !isValid;
 
-        if (!isValid && (nameInput.value || guestsInput.value || Array.from(attendingInputs).some((input) => input.checked))) {
-          formError.classList.add('show');
-        } else {
-          formError.classList.remove('show');
-        }
+  if (!isValid && (nameInput.value || guestsInput.value || Array.from(attendingInputs).some((input) => input.checked))) {
+    formError.textContent = 'Please enter your name, attendance, and number of guests (max 9).';
+    formError.classList.add('show');
+  } else {
+    formError.classList.remove('show');
+  }
 
-        return isValid;
-      }
+  return isValid;
+}
+let lastValidGuests = '';
+
+guestsInput.addEventListener('input', () => {
+  const val = guestsInput.value;
+
+  if (val === '') {
+    lastValidGuests = '';
+    validateRsvpForm();
+    return;
+  }
+
+  const num = Number(val);
+
+  // Reject anything that's not a clean 1-digit number between 1 and 9
+  if (!/^\d+$/.test(val) || num < 1 || num > 9) {
+    guestsInput.value = lastValidGuests;
+  } else {
+    lastValidGuests = val;
+  }
+
+  validateRsvpForm();
+});
 
       function updateGuestFieldState() {
         const attendingValue = Array.from(attendingInputs).find((input) => input.checked)?.value || '';
